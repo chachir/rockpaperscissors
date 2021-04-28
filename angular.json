@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "rock-paper-scissors"
+  "defaultProject": "rock-paper-scissors",
+  "cli": {
+    "analytics": false
+  }
 }
