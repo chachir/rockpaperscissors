@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  contador(count: number): void{
+    count++;
+  };
+
 }
+
+
