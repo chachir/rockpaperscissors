@@ -1,12 +1,3 @@
-/*.circle {
-    position: relative;
-    border-radius: 50%;
-    width: 100%;
-    height: auto;
-    padding-top: 100%;
-    background: rgb(206, 33, 33);
-}*/
-
 .hands{
   margin-top: auto;
   margin-bottom: auto;
@@ -23,3 +14,20 @@
   margin-top: auto;
   margin-bottom: auto;
 }
+
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border-color: transparent;
+  text-align: center;
+  }

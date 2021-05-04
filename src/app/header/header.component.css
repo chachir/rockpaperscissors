@@ -4,10 +4,8 @@
     font-family: 'Walt Disney Script', arial;
  }*/
 
- @import url("https://allfont.es/allfont.css?fonts=walt-disney-script");
 
 h1 {
-  font-family: 'Walt Disney Script';
   font-size: 250%;
   text-align: center;
   color: white;
