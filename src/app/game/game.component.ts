@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CounterComponent } from '../counter/counter.component';
 
 @Component({
   selector: 'app-game',
@@ -15,8 +16,16 @@ export class GameComponent implements OnInit {
   player = "You";
   machine = "Machine";
 
+  @ViewChild('youPlayer') childOne: CounterComponent;
+  @ViewChild('machinePlayer') childTwo: CounterComponent;
+
   getWinner(winnerEvent){
     console.log(winnerEvent);
+    if (winnerEvent == "win") {
+      this.childOne.contador();
+    } else if (winnerEvent = "lose") {
+      this.childTwo.contador();
+    }
   }
 
 }
