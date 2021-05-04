@@ -1,22 +1,20 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-3" *ngFor = "let hand of list">
-        <div (click) = "choice(hand.value)"><img src="/assets/img/{{hand.image}}.png" width="35%" ></div>
-        <!--<div (click) = "choice(0)"><img src="/assets/img/rock.png" width="35%"></div>
+<div class="row">
+  <div class="choose col-sm-0 col-md-3" *ngFor="let hand of list">
+    <div (click)="choice(hand.value)"><img class="image" src="/assets/img/{{hand.image}}.png" width="35%"></div>
+    <!--<div (click) = "choice(0)"><img src="/assets/img/rock.png" width="35%"></div>
         <div (click) = "choice(2)"><img src="/assets/img/scissors.png" width="35%"></div>-->
-    </div>
-    <div class="col-3 justify-content-center" *ngFor = "let hand of list">
-        <div *ngIf="playerRPS == hand.value"><img src="/assets/img/{{hand.image}}.png" width="50%" ></div>
-        <!--<div *ngIf="playerRPS == 0"><img src="/assets/img/rock.png" width="50%" ></div>
+  </div>
+  <div class="hands col-sm-12 col-md-3" *ngFor="let hand of list">
+    <div *ngIf="playerRPS == hand.value"><img class="image" src="/assets/img/{{hand.image}}.png" width="60%"></div>
+    <!--<div *ngIf="playerRPS == 0"><img src="/assets/img/rock.png" width="50%" ></div>
         <div *ngIf="playerRPS == 2"><img src="/assets/img/scissors.png" width="50%" ></div>-->
-    </div>
-    <div class="col-3 justify-content-center" *ngFor = "let hand of list">
-        <div *ngIf="machineRPS == hand.value"><img src="/assets/img/{{hand.image}}.png" width="50%" ></div>
-        <!--<div *ngIf="machineRPS == 0"><img src="/assets/img/rock.png" width="50%" ></div>
+  </div>
+  <div class="hands col-sm-12 col-md-3" *ngFor="let hand of list">
+    <div *ngIf="machineRPS == hand.value"><img class="image" src="/assets/img/{{hand.image}}.png" width="60%"></div>
+    <!--<div *ngIf="machineRPS == 0"><img src="/assets/img/rock.png" width="50%" ></div>
         <div *ngIf="machineRPS == 2"><img src="/assets/img/scissors.png" width="50%"></div>-->
-    </div>
-    <div class="col-3">
+  </div>
+  <div class="col-sm-0 col-md-3">
 
-    </div>
   </div>
 </div>

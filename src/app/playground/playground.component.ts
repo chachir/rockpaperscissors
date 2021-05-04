@@ -20,6 +20,9 @@ export class PlaygroundComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  player = "hola";
+  machine = "adios";
+
   playRPS(): void {
     this.machineRPS = this.randomChoice();
     console.log("Machine: " + this.machineRPS);
