@@ -13,7 +13,7 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  player = "hola";
-  machine = "adios";
+  player = "You";
+  machine = "Machine";
 
 }
