@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  
   constructor() { }
 
   ngOnInit(): void {
@@ -15,5 +14,9 @@ export class GameComponent implements OnInit {
   
   player = "You";
   machine = "Machine";
+
+  getWinner(winnerEvent){
+    console.log(winnerEvent);
+  }
 
 }

@@ -1,4 +1,10 @@
 .container{
     margin-top: 30px;
   }
-  
+
+
+.center-counter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

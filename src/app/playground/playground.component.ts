@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { RPS_LIST } from '../PicList';
 
 @Component({
   selector: 'app-playground',
@@ -12,6 +13,9 @@ export class PlaygroundComponent implements OnInit {
   machineRPS: number;
   result: number;
   winner: string;
+  list = RPS_LIST;
+  @Output()
+  propagate = new EventEmitter<string>();
 
   ngOnInit(): void {
   }
@@ -20,7 +24,7 @@ export class PlaygroundComponent implements OnInit {
     this.machineRPS = this.randomChoice();
     console.log("Machine: " + this.machineRPS);
     this.winner = this.whoWon(this.playerRPS, this.machineRPS);
-    console.log(this.winner);
+    this.propagate.emit(this.winner);
   }
 
   choice(playerChoice: number): void {
@@ -36,11 +40,11 @@ export class PlaygroundComponent implements OnInit {
   whoWon(player: number, machine: number): string {
     this.result = player - machine;
     if(this.result == 0){
-      return "both";
+      return "draw";
     } else if(this.result == 1 || this.result == -2){
-      return "player";
+      return "win";
     } else {
-      return "machine";
+      return "lose";
     }
   }
 
