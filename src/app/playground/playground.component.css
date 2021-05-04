@@ -6,3 +6,20 @@
     padding-top: 100%;
     background: rgb(206, 33, 33);
 }*/
+
+.hands{
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+.image{
+  border-radius: 50%;
+  border: solid 5px;
+  border-color: #ff5b64;
+}
+
+.choose{
+  margin-top: auto;
+  margin-bottom: auto;
+}
