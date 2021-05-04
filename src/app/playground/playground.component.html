@@ -1,20 +1,27 @@
-<div class="grid">
-  <ng-container *ngFor="let hand of list">
-    <div class="choose">
-      <ul class="list-group transparent">
-        <li class="list-group-item"><img (click)="choice(hand.value)" class="image" src="/assets/img/{{hand.image}}.png" width="35%"></li>
-      </ul>
-    </div>
-    <div class="hands col-md-4 col-sm-6 col-12">
-      <div *ngIf="playerRPS == hand.value"><img class="image" src="/assets/img/{{hand.image}}.png" width="60%"></div>
-    </div>
-    <div class="hands col-md-4 col-sm-6 col-12">
-      <div *ngIf="machineRPS == hand.value"><img class="image" src="/assets/img/{{hand.image}}.png" width="60%"></div>
-    </div>
-    <div class="col-md-4 col-sm-6 col-12">
-
-    </div>
-  </ng-container>
+<div class="row">
+  <div class="choose col-3">
+    <ul class="list-group" *ngFor="let hand of list">
+      <li class="list-group-item">
+        <img (click)="choice(hand.value)" class="image-choice" src="/assets/img/{{hand.image}}.png" width="30%">
+      </li>
+    </ul>
+  </div>
+  <div class="hands col-3">
+    <ul class="list-group" *ngFor="let hand of list">
+      <li *ngIf="playerRPS == hand.value" class="list-group-item"><img class="image"
+          src="/assets/img/{{hand.image}}.png" width="80%"></li>
+    </ul>
+  </div>
+  <div class="hands col-3">
+    <ul class="list-group" *ngFor="let hand of list">
+      <li *ngIf="machineRPS == hand.value" class="list-group-item"><img class="image"
+          src="/assets/img/{{hand.image}}.png" width="80%"></li>
+    </ul>
+  </div>
+  <div class="col-3">
+    <h1>Rules</h1>
+    <img class="rules" src="/assets/img/rules.png" width="80%">
+  </div>
 </div>
 
 <h1>You {{winner}}! </h1>

@@ -6,6 +6,13 @@
 
 .image{
   border-radius: 50%;
+  border: solid 20px;
+  border-color: #ff5b64;
+}
+
+
+.image-choice {
+  border-radius: 50%;
   border: solid 5px;
   border-color: #ff5b64;
 }
@@ -15,19 +22,22 @@
   margin-bottom: auto;
 }
 
-
 h1 {
   color: white;
   text-align: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .list-group-item {
   background-color: transparent;
   border-color: transparent;
   text-align: center;
+  }
+
+  img {
+    padding: 1em;
+    margin: 1em;
+  } 
+
+  .rules {
+    border-radius: 10%;
   }
