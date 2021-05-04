@@ -1,15 +1,15 @@
-<div class="row">
-  <div class="choose col-sm-0 col-md-3" *ngFor="let hand of list">
-    <div (click)="choice(hand.value)"><img class="image" src="/assets/img/{{hand.image}}.png" width="35%"></div>
+<div class="row" *ngFor="let hand of list">
+  <div class="choose col-sm-0 col-md-3" >
+    <div (click)="choice(hand.value)"><img (click)="choice(hand.value)" class="image" src="/assets/img/{{hand.image}}.png" width="35%"></div>
     <!--<div (click) = "choice(0)"><img src="/assets/img/rock.png" width="35%"></div>
         <div (click) = "choice(2)"><img src="/assets/img/scissors.png" width="35%"></div>-->
   </div>
-  <div class="hands col-sm-12 col-md-3" *ngFor="let hand of list">
+  <div class="hands col-sm-12 col-md-3">
     <div *ngIf="playerRPS == hand.value"><img class="image" src="/assets/img/{{hand.image}}.png" width="60%"></div>
     <!--<div *ngIf="playerRPS == 0"><img src="/assets/img/rock.png" width="50%" ></div>
         <div *ngIf="playerRPS == 2"><img src="/assets/img/scissors.png" width="50%" ></div>-->
   </div>
-  <div class="hands col-sm-12 col-md-3" *ngFor="let hand of list">
+  <div class="hands col-sm-12 col-md-3" >
     <div *ngIf="machineRPS == hand.value"><img class="image" src="/assets/img/{{hand.image}}.png" width="60%"></div>
     <!--<div *ngIf="machineRPS == 0"><img src="/assets/img/rock.png" width="50%" ></div>
         <div *ngIf="machineRPS == 2"><img src="/assets/img/scissors.png" width="50%"></div>-->
