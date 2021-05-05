@@ -7,7 +7,7 @@
 .image{
   border-radius: 50%;
   border: solid 20px;
-  border-color: #ff5b64;
+  border-color: rgb(255, 91, 100);
 }
 
 
@@ -40,4 +40,21 @@ h1 {
 
   .rules {
     border-radius: 10%;
+  }
+
+
+  .walt-font {
+    font-family: 'WaltographRegular';
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  p {
+    font-size: 4em;
+    text-align: center;
+    color: white;
+  }
+
+  .margin-message {
+    margin: -35px;
   }
