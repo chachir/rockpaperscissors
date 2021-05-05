@@ -21,6 +21,12 @@
 .choose {
   margin-top: auto;
   margin-bottom: auto;
+
+}
+
+.card{
+  background-color: transparent;
+  border-color: transparent;
 }
 
 h1 {
@@ -32,6 +38,7 @@ h1 {
   background-color: transparent;
   border-color: transparent;
   text-align: center;
+  width: 50%;
 }
 
 img {

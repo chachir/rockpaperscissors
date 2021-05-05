@@ -1,22 +1,18 @@
 <div class="row">
   <div class="choose col-3">
-    <ul class="list-group" *ngFor="let hand of list">
-      <li class="list-group-item">
-        <img (click)="choice(hand.value)" class="image-choice" src="/assets/img/{{hand.image}}.png">
-      </li>
-    </ul>
+    <div class="card align-items-center" *ngFor="let hand of list">
+      <img (click)="choice(hand.value)" class="image-choice" src="/assets/img/{{hand.image}}.png">
+    </div>
   </div>
   <div class="hands col-3">
-    <ul class="list-group" *ngFor="let hand of list">
-      <li *ngIf="playerRPS == hand.value" class="list-group-item"><img class="image"
-          src="/assets/img/{{hand.image}}.png"></li>
-    </ul>
+    <div class="card align-items-center" *ngFor="let hand of list">
+      <img class="image" *ngIf="playerRPS == hand.value"  src="/assets/img/{{hand.image}}.png">
+    </div>
   </div>
   <div class="hands col-3">
-    <ul class="list-group" *ngFor="let hand of list">
-      <li *ngIf="machineRPS == hand.value" class="list-group-item"><img class="image"
-          src="/assets/img/{{hand.image}}.png"></li>
-    </ul>
+    <div class="card align-items-center" *ngFor="let hand of list">
+      <img class="image" *ngIf="machineRPS == hand.value"  src="/assets/img/{{hand.image}}.png">
+    </div>
   </div>
   <div class="col-3">
     <h1>Rules</h1>
