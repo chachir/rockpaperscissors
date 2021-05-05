@@ -12,7 +12,7 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   player = "You";
   machine = "Machine";
 
@@ -23,7 +23,7 @@ export class GameComponent implements OnInit {
     console.log(winnerEvent);
     if (winnerEvent == "win") {
       this.childOne.contador();
-    } else if (winnerEvent = "lose") {
+    } else if (winnerEvent == "lose") {
       this.childTwo.contador();
     }
   }
