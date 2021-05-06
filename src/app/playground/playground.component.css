@@ -1,26 +1,33 @@
-.hands{
+.hands {
   margin-top: auto;
   margin-bottom: auto;
   text-align: center;
 }
 
-.image{
+.image {
   border-radius: 50%;
   border: solid 20px;
-  border-color: rgb(255, 91, 100);
+  border-color: #ff5b64;
+  width: 80%;
   background-color: rgba(255, 91, 99, 0.2);
 }
-
 
 .image-choice {
   border-radius: 50%;
   border: solid 5px;
   border-color: #aad4c8;
+  width: 50%;
 }
 
-.choose{
+.choose {
   margin-top: auto;
   margin-bottom: auto;
+
+}
+
+.card{
+  background-color: transparent;
+  border-color: transparent;
 }
 
 h1 {
@@ -32,15 +39,17 @@ h1 {
   background-color: transparent;
   border-color: transparent;
   text-align: center;
-  }
+  width: 50%;
+}
 
-  img {
-    padding: 1em;
-    margin: 1em;
-  } 
+img {
+  padding: 1em;
+  margin: 1em;
+}
 
   .rules {
     border-radius: 10%;
+    width: 80%;
   }
 
 
