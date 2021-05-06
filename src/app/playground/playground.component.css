@@ -9,6 +9,7 @@
   border: solid 20px;
   border-color: #ff5b64;
   width: 80%;
+  background-color: rgba(255, 91, 99, 0.2);
 }
 
 .image-choice {
@@ -46,7 +47,24 @@ img {
   margin: 1em;
 }
 
-.rules {
-  border-radius: 10%;
-  width: 80%;
-}
+  .rules {
+    border-radius: 10%;
+    width: 80%;
+  }
+
+
+  .walt-font {
+    font-family: 'WaltographRegular';
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  p {
+    font-size: 4em;
+    text-align: center;
+    color: white;
+  }
+
+  .margin-message {
+    margin: -35px;
+  }

@@ -13,6 +13,7 @@ export class PlaygroundComponent implements OnInit {
   machineRPS: number;
   result: number;
   winner: string;
+  message: string;
   list = RPS_LIST;
   @Output()
   propagate = new EventEmitter<string>();
@@ -20,14 +21,20 @@ export class PlaygroundComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  player = "hola";
-  machine = "adios";
-
   playRPS(): void {
     this.machineRPS = this.randomChoice();
     console.log("Machine: " + this.machineRPS);
     this.winner = this.whoWon(this.playerRPS, this.machineRPS);
+    this.message = this.shownMessage(this.winner);
     this.propagate.emit(this.winner);
+  }
+
+  shownMessage(winner: string): string {
+    if(winner == "draw") {
+      return "It's a draw!";
+    } else {
+      return "You " + winner + "!";
+    }
   }
 
   choice(playerChoice: number): void {

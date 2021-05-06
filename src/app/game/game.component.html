@@ -2,12 +2,16 @@
   <div class="row">
     <div class="col-3">
     </div>
-    <div class="col-3">
-      <app-counter #youPlayer [name]="player"></app-counter>
+    <div class="col-3 .mx-auto">
+      <div class="col d-flex justify-content-center">
+        <app-counter #youPlayer [name]="player"></app-counter>
+      </div>
 
     </div>
-    <div class="col-3">
-      <app-counter #machinePlayer [name]="machine"></app-counter>
+    <div class="col-3 .mx-auto">
+      <div class="col d-flex justify-content-center">
+        <app-counter #machinePlayer [name]="machine"></app-counter>
+      </div>
 
     </div>
     <div class="col-3">
