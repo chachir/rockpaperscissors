@@ -1,7 +1,18 @@
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
 
 body {
     background: linear-gradient(to right, #6951ae 50%, #190845 50%);
 }
 
-/* You can add global styles to this file, and also import other style files */
 

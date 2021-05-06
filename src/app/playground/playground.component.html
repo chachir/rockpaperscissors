@@ -1,20 +1,28 @@
-<div class="row" *ngFor="let hand of list">
-  <div class="choose col-sm-0 col-md-3" >
-    <div><img (click)="choice(hand.value)" class="image" src="/assets/img/{{hand.image}}.png" width="35%"></div>
-    <!--<div (click) = "choice(0)"><img src="/assets/img/rock.png" width="35%"></div>
-        <div (click) = "choice(2)"><img src="/assets/img/scissors.png" width="35%"></div>-->
-  </div>
-  <div class="hands col-sm-12 col-md-3">
-    <div *ngIf="playerRPS == hand.value"><img class="image" src="/assets/img/{{hand.image}}.png" width="60%"></div>
-    <!--<div *ngIf="playerRPS == 0"><img src="/assets/img/rock.png" width="50%" ></div>
-        <div *ngIf="playerRPS == 2"><img src="/assets/img/scissors.png" width="50%" ></div>-->
-  </div>
-  <div class="hands col-sm-12 col-md-3" >
-    <div *ngIf="machineRPS == hand.value"><img class="image" src="/assets/img/{{hand.image}}.png" width="60%"></div>
-    <!--<div *ngIf="machineRPS == 0"><img src="/assets/img/rock.png" width="50%" ></div>
-        <div *ngIf="machineRPS == 2"><img src="/assets/img/scissors.png" width="50%"></div>-->
-  </div>
-  <div class="col-sm-0 col-md-3">
+<div class="row">
+  <div class="choose col-3">
+    <div class="card align-items-center" *ngFor="let hand of list">
+      <img (click)="choice(hand.value)" class="image-choice" type="button" src="/assets/img/{{hand.image}}.png">
+    </div>
 
   </div>
+  <div class="hands col-3">
+    <div class="card align-items-center" *ngFor="let hand of list">
+      <img class="image" *ngIf="playerRPS == hand.value"  src="/assets/img/{{hand.image}}.png">
+    </div>
+  </div>
+  <div class="hands col-3">
+    <div class="card align-items-center" *ngFor="let hand of list">
+      <img class="image" *ngIf="machineRPS == hand.value"  src="/assets/img/{{hand.image}}.png">
+    </div>
+  </div>
+  <div class="col-3">
+
+    <p class="walt-font">Rules</p>
+    <img class="rules mx-auto d-block" src="/assets/img/rules.png" width="80%">
+  </div>
+</div>
+
+<div class="row margin-message">
+  <p class="walt-font" *ngIf="machineRPS != null">{{message}}</p>
+  <p class="walt-font" *ngIf="machineRPS == null">Choose a hand...</p>
 </div>
