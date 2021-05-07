@@ -9,13 +9,15 @@ export class CounterComponent implements OnInit {
 
 
   @Input() name: string;
+  count: number;
   constructor() { }
 
   ngOnInit(): void {
+    this.count = 0;
   }
 
-  contador(count: number): void{
-    count++;
+  contador(): void{
+    this.count++;
   };
 
 }

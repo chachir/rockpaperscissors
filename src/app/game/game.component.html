@@ -1,14 +1,17 @@
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <app-counter [name]="player"></app-counter>
-
-        </div>
-        <div class="col">
-            <app-counter [name]="machine"></app-counter>
-
-        </div>
+<div class="container-fluid">
+  <div class="row align-items-center">
+    <div class="col-6 col-sm-6 col-md-6 align-items-center mx-auto">
+      <div class="col d-flex justify-content-center">
+        <app-counter #youPlayer [name]="player"></app-counter>
+      </div>
     </div>
-</div>
 
-<app-playground></app-playground>
+    <div class="col-6 col-sm-6 col-md-6 align-items-center mx-auto">
+      <div class="col d-flex justify-content-center">
+        <app-counter #machinePlayer [name]="machine"></app-counter>
+      </div>
+    </div>
+  </div>
+  <app-playground (propagate)="getWinner($event)"></app-playground>
+
+</div>

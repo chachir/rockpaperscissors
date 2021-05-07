@@ -1,17 +1,45 @@
-<div>
-    <div (click) = "choice(1)"><img src="/assets/img/paper.png" width="10%" height="10%"></div>
-    <div (click) = "choice(0)"><img src="/assets/img/rock.png" width="10%" height="10%"></div>
-    <div (click) = "choice(2)"><img src="/assets/img/scissors.png" width="10%" height="10%"></div>
+<div class="row">
+  <p class="walt-font" *ngIf="machineRPS != null">{{message}}</p>
+  <p class="walt-font" *ngIf="machineRPS == null">Choose a weapon...</p>
 </div>
-<div class="styled">
-    <div class="circle">player
-        <div *ngIf="playerRPS == 1"><img src="/assets/img/paper.png" width="20%" height="20%"></div>
-        <div *ngIf="playerRPS == 0"><img src="/assets/img/rock.png" width="20%" height="20%"></div>
-        <div *ngIf="playerRPS == 2"><img src="/assets/img/scissors.png" width="20%" height="20%"></div>
+
+<div class="row row-cols-3 mb-5">
+  <div class="col">
+    <div class="card align-items-end">
+      <img *ngIf="machineRPS == null" (click)="choice(1)" class="image-choice first-choice" type="button"
+        src="/assets/img/paper.png">
+      <img *ngIf="machineRPS != null" (click)="choice(1)" class="image-choice following-choices" type="button"
+        src="/assets/img/paper.png">
     </div>
+  </div>
+  <div class="col">
+    <div class="card align-items-center">
+      <img *ngIf="machineRPS == null" (click)="choice(0)" class="image-choice first-choice" type="button"
+        src="/assets/img/rock.png">
+      <img *ngIf="machineRPS != null" (click)="choice(0)" class="image-choice following-choices" type="button"
+        src="/assets/img/rock.png">
+    </div>
+  </div>
+  <div class="col">
+    <div class="card align-items-start">
+      <img *ngIf="machineRPS == null" (click)="choice(2)" class="image-choice first-choice" type="button"
+        src="/assets/img/scissors.png">
+      <img *ngIf="machineRPS != null" (click)="choice(2)" class="image-choice following-choices" type="button"
+        src="/assets/img/scissors.png">
+    </div>
+  </div>
+
 </div>
-<div>machine
-    <div *ngIf="machineRPS == 1"><img src="/assets/img/paper.png" width="20%" height="20%"></div>
-    <div *ngIf="machineRPS == 0"><img src="/assets/img/rock.png" width="20%" height="20%"></div>
-    <div *ngIf="machineRPS == 2"><img src="/assets/img/scissors.png" width="20%" height="20%"></div>
+
+<div class="row row-cols-2 ">
+  <div class="hands col-6 col-sm-6 col-md-6 mx-auto">
+    <div class="card align-items-center" *ngFor="let hand of list">
+      <img class="image" *ngIf="playerRPS == hand.value" src="/assets/img/{{hand.image}}.png">
+    </div>
+  </div>
+  <div class="hands col-6 col-sm-6 col-md-6 mx-auto">
+    <div class="card align-items-center" *ngFor="let hand of list">
+      <img class="image" *ngIf="machineRPS == hand.value" src="/assets/img/{{hand.image}}.png">
+    </div>
+  </div>
 </div>

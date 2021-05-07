@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CounterComponent } from '../counter/counter.component';
 
 @Component({
   selector: 'app-game',
@@ -7,13 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  
   constructor() { }
 
   ngOnInit(): void {
   }
-  
-  player = "hola";
-  machine = "adios";
+
+  player = "You";
+  machine = "Machine";
+
+  @ViewChild('youPlayer') childOne: CounterComponent;
+  @ViewChild('machinePlayer') childTwo: CounterComponent;
+
+  getWinner(winnerEvent){
+    console.log(winnerEvent);
+    if (winnerEvent == "win") {
+      this.childOne.contador();
+    } else if (winnerEvent == "lose") {
+      this.childTwo.contador();
+    }
+  }
 
 }
