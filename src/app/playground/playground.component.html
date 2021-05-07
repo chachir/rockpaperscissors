@@ -2,33 +2,43 @@
   <p class="walt-font" *ngIf="machineRPS != null">{{message}}</p>
   <p class="walt-font" *ngIf="machineRPS == null">Choose a weapon...</p>
 </div>
-<div class="row row-cols-3">
+
+<div class="row row-cols-3 mb-5">
   <div class="col">
     <div class="card align-items-end">
-      <img (click)="choice(1)" class="image-choice" type="button" src="/assets/img/paper.png">
+      <img *ngIf="machineRPS == null" (click)="choice(1)" class="image-choice first-choice" type="button"
+        src="/assets/img/paper.png">
+      <img *ngIf="machineRPS != null" (click)="choice(1)" class="image-choice following-choices" type="button"
+        src="/assets/img/paper.png">
     </div>
   </div>
   <div class="col">
     <div class="card align-items-center">
-      <img (click)="choice(0)" class="image-choice" type="button" src="/assets/img/rock.png">
+      <img *ngIf="machineRPS == null" (click)="choice(0)" class="image-choice first-choice" type="button"
+        src="/assets/img/rock.png">
+      <img *ngIf="machineRPS != null" (click)="choice(0)" class="image-choice following-choices" type="button"
+        src="/assets/img/rock.png">
     </div>
   </div>
   <div class="col">
     <div class="card align-items-start">
-      <img (click)="choice(2)" class="image-choice" type="button" src="/assets/img/scissors.png">
+      <img *ngIf="machineRPS == null" (click)="choice(2)" class="image-choice first-choice" type="button"
+        src="/assets/img/scissors.png">
+      <img *ngIf="machineRPS != null" (click)="choice(2)" class="image-choice following-choices" type="button"
+        src="/assets/img/scissors.png">
     </div>
   </div>
 
 </div>
 
-<div class="row row-cols-2">
-  <div class="hands col-6 col-sm-6 col-md-6 align-items-center mx-auto">
+<div class="row row-cols-2 ">
+  <div class="hands col-6 col-sm-6 col-md-6 mx-auto">
     <div class="card align-items-center" *ngFor="let hand of list">
       <img class="image" *ngIf="playerRPS == hand.value" src="/assets/img/{{hand.image}}.png">
     </div>
   </div>
   <div class="hands col-6 col-sm-6 col-md-6 mx-auto">
-    <div class="card" *ngFor="let hand of list">
+    <div class="card align-items-center" *ngFor="let hand of list">
       <img class="image" *ngIf="machineRPS == hand.value" src="/assets/img/{{hand.image}}.png">
     </div>
   </div>
