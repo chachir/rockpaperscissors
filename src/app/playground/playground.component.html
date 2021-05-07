@@ -3,36 +3,10 @@
   <p class="walt-font" *ngIf="machineRPS == null">Choose a weapon...</p>
 </div>
 
-
-<!--<div class="row playground">
-  <div class="choose col-0 col-sm-0 col-md-3">
-    <div class="card align-items-center" *ngFor="let hand of list">
-      <img (click)="choice(hand.value)" class="image-choice" type="button" src="/assets/img/{{hand.image}}.png">
-    </div>
-
-  </div>
-  <div class="hands col-12 col-sm-12 col-md-3">
-    <div class="card align-items-center" *ngFor="let hand of list">
-      <img class="image" *ngIf="playerRPS == hand.value"  src="/assets/img/{{hand.image}}.png">
-    </div>
-  </div>
-  <div class="hands col-12 col-sm-12 col-md-3">
-    <div class="card align-items-center" *ngFor="let hand of list">
-      <img class="image" *ngIf="machineRPS == hand.value"  src="/assets/img/{{hand.image}}.png">
-    </div>
-  </div>
-  <div class="col-0 col-sm-0 col-md-3">
-
-    <p class="walt-font">Rules</p>
-    <img class="rules mx-auto d-block" src="/assets/img/rules.png">
-  </div>
-</div>
-
--->
-
 <div class="row row-cols-3">
   <div class="card align-items-center" *ngFor="let hand of list">
-    <img (click)="choice(hand.value)" class="image-choice" type="button" src="/assets/img/{{hand.image}}.png">
+    <img *ngIf="machineRPS == null" (click)="choice(hand.value)" class="image-choice first-choice" type="button" src="/assets/img/{{hand.image}}.png">
+    <img *ngIf="machineRPS != null" (click)="choice(hand.value)" class="image-choice following-choices" type="button" src="/assets/img/{{hand.image}}.png">
   </div>
 </div>
 
