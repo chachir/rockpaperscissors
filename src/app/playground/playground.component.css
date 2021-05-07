@@ -1,6 +1,6 @@
 .hands {
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 50px;
   text-align: center;
   max-width: 500px;
 }
@@ -61,10 +61,3 @@ img {
     color: white;
   }
 
-  .margin-message {
-    margin: -35px;
-  }
-
-  /*.playground {
-    margin-top: -10em;
-  }*/
