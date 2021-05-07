@@ -9,7 +9,7 @@ RockPaperScissors is the classic game Rock Paper Scissors built with Angular and
 
 ## Live Demo
 
-[RockPaperScissors](/)
+[RockPaperScissors](https://rockpaperscissors-rps.firebaseapp.com/)
 
 ## Built with
 
