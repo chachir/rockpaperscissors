@@ -2,6 +2,7 @@
   margin-top: auto;
   margin-bottom: auto;
   text-align: center;
+  max-width: 500px;
 }
 
 .image {
@@ -47,11 +48,6 @@ img {
   margin: 1em;
 }
 
-  .rules {
-    border-radius: 10%;
-    width: 80%;
-  }
-
 
   .walt-font {
     font-family: 'WaltographRegular';
@@ -68,3 +64,7 @@ img {
   .margin-message {
     margin: -35px;
   }
+
+  /*.playground {
+    margin-top: -10em;
+  }*/

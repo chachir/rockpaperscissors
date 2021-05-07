@@ -9,6 +9,7 @@ import { GameComponent } from './game/game.component';
 import { CounterComponent } from './counter/counter.component';
 import { PlaygroundComponent } from './playground/playground.component';
 import { FooterComponent } from './footer/footer.component';
+import { RulesComponent } from './rules/rules.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     GameComponent,
     CounterComponent,
     PlaygroundComponent,
-    FooterComponent
+    FooterComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
