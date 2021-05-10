@@ -20,7 +20,6 @@ export class GameComponent implements OnInit {
   @ViewChild('machinePlayer') childTwo: CounterComponent;
 
   getWinner(winnerEvent){
-    console.log(winnerEvent);
     if (winnerEvent == "win") {
       this.childOne.contador();
     } else if (winnerEvent == "lose") {

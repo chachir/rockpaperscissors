@@ -23,7 +23,6 @@ export class PlaygroundComponent implements OnInit {
 
   playRPS(): void {
     this.machineRPS = this.randomChoice();
-    console.log("Machine: " + this.machineRPS);
     this.winner = this.whoWon(this.playerRPS, this.machineRPS);
     this.message = this.shownMessage(this.winner);
     this.propagate.emit(this.winner);
@@ -38,9 +37,14 @@ export class PlaygroundComponent implements OnInit {
   }
 
   choice(playerChoice: number): void {
-    this.playerRPS = playerChoice;
-    console.log("Player: " + this.playerRPS);
-    this.playRPS();
+    this.playerRPS = null;
+    this.machineRPS = null;
+    setTimeout(() => 
+    { 
+      this.playerRPS = playerChoice;
+      this.playRPS();
+    },
+    500);
   }
 
   randomChoice(): number {
