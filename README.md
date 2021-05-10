@@ -1,6 +1,8 @@
 # RockPaperScissors
 
 RockPaperScissors is the classic game Rock Paper Scissors built with Angular and Bootstrap.
+![image](https://user-images.githubusercontent.com/12657990/117445016-7de42600-af3a-11eb-9ade-b0816b7de437.png)
+
 
 ## Rules
  - Rock beats Scissors
@@ -9,7 +11,7 @@ RockPaperScissors is the classic game Rock Paper Scissors built with Angular and
 
 ## Live Demo
 
-[RockPaperScissors](/)
+[RockPaperScissors](https://rockpaperscissors-rps.firebaseapp.com/)
 
 ## Built with
 
